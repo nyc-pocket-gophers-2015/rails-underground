@@ -36,6 +36,6 @@ check_3.items << gg
 check_3.items << gj
 check_3.items << cb
 
-check_1.save
-check_2.save
-check_3.save
+check_1.save!
+check_2.save!
+check_3.save!
