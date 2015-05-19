@@ -1,7 +1,7 @@
 organizer = User.create!(first_name: 'Zack', password:'123', last_name: 'Mance', email: 'zack@dbc.com', age: 29)
 
-guest_1 = User.create!(password:'123',first_name: 'Jean', last_name: 'Grey', email: 'jg@dbc.com', age: 32)
-guest_2 = User.create!(password:'123',first_name: 'Scott', last_name: 'Summers', email: 'zack@dbc.com', age: 29)
+guest_1 = User.create!(password:'123',first_name: 'Jean', last_name: 'Grey', email: 'jean@example.com', age: 32)
+guest_2 = User.create!(password:'123',first_name: 'Scott', last_name: 'Summers', email: 'scott@example.com', age: 29)
 
 graduation = Event.create!(name: 'Graduation', min_age: 18, held_at: DateTime.parse('05/06/2015'), organizer_id: organizer.id)
 mysteryland= Event.create!(name: 'Mysterland', min_age: 18, held_at: DateTime.parse('22/05/2015'), organizer_id: organizer.id)
