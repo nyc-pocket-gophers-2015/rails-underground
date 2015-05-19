@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
   has_many :reservations
   has_many :attended_events, through: :reservations, source: :event
 
+  def name
+    (first_name + ' ' + last_name).strip
+  end
+
 end
