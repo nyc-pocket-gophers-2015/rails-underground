@@ -1,0 +1,24 @@
+<%= form_for @event do |f| %>
+
+<div>
+ <%=  f.label :name %>
+ <%=  f.text_field :name %>
+</div>
+
+<div>
+  <%= f.label :min_age %>
+  <%= f.text_field :min_age %>
+</div>
+
+<div>
+  <%= f.label :held_at %>
+  <%= f.date_field :held_at %>
+</div>
+
+  <div><h3>Guests</h3>
+    <input type="text" name="person[][email]"> <br>
+    <input type="text" name="person[][email]">
+  </div>
+
+<%= submit_tag %>
+<% end %>
