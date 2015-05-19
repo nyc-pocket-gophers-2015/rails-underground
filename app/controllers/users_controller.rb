@@ -13,6 +13,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def find_by_email
+    user = User.find_by(email: params[:email])
+    if user
+      render json: user
+    else
+      render text: "Not found", status: 404
+    end
+  end
+
   private 
 
   def user_params

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resources :events
   root 'events#index'
+  get 'users/find' => 'users#find_by_email', as: :find_user
   get 'login' => 'sessions#new'
   get 'signup' => 'users#new'
 

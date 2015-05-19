@@ -29,4 +29,17 @@ form#new_user {
   form {
   display:inline;
   }
+  margin-bottom:10px;
+  padding-bottom:10px;
+  border-bottom: 1px dashed gray;
+}
+
+form#new_event {
+  label {
+   display:inline-block;
+   width:100px;
+  }
+  input {
+    margin: 2px 0;
+  }
 }

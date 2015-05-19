@@ -16,8 +16,12 @@
 </div>
 
   <div><h3>Guests</h3>
-    <input type="text" name="person[][email]"> <br>
-    <input type="text" name="person[][email]">
+    <ul>
+    <% 5.times do |n| %>
+     <li> <input data-input-id="<%= n %>" class="guest" type="text" name="person[][email]"> 
+      <span data-span-id="<%= n %>"></span> </li>
+    <% end %>
+    </ul>
   </div>
 
 <%= submit_tag %>
