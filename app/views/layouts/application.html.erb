@@ -7,9 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="flash_notice"><%= flash[:notice] %></div>
-<div id="flash_warn" class="error_feedback"><%= flash[:warn] %></div>
-
+<div id="header">
+  <div>
+    <% if current_user %>
+      Welcome <%= current_user.name %>
+      <%= button_to 'Logout', session_path, method: :delete %>
+     <% end %> 
+  </div>
+  <div id="flash_notice"><%= flash[:notice] %></div>
+  <div id="flash_warn" class="error_feedback"><%= flash[:warn] %></div>
+</div>
 <%= yield %>
 
 </body>
