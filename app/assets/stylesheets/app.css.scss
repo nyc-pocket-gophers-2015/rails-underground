@@ -43,3 +43,12 @@ form#new_event {
     margin: 2px 0;
   }
 }
+
+ul#guest-list {
+  .guest-ok {
+    color:green;
+  }
+  .guest-bad {
+    color : red;
+  }
+}

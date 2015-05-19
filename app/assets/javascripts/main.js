@@ -7,9 +7,13 @@ $(document).ready(function(){
       $.get(url)
       .done(function(response) {
         $span.html('&#10004;');
+        $span.removeClass("guest-bad");
+        $span.addClass("guest-ok");
       })
       .fail(function(response){
         $span.html('&#10005;');
+        $span.removeClass("guest-ok");
+        $span.addClass("guest-bad");
       });
     }
   });

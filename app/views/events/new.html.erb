@@ -17,10 +17,10 @@
 </div>
 
   <div><h3>Guests</h3>
-    <ul>
+    <ul id="guest-list">
     <% 5.times do |n| %>
      <li> <input data-input-id="<%= n %>" class="guest" type="text" name="person[][email]"> 
-      <span data-span-id="<%= n %>"></span> </li>
+      <span class="guest-check" data-span-id="<%= n %>"></span> </li>
     <% end %>
     </ul>
   </div>
