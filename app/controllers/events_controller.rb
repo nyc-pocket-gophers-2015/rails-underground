@@ -1,6 +1,10 @@
 class EventsController < ApplicationController
   before_action :require_current_user
 
+  def latest
+    @events = Event.order(created_at: :desc).limit(20)
+  end
+
   def index
     @events = current_user.events.future
   end

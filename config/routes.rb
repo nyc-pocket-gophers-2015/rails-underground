@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   resource :session, only:[:new, :create, :destroy]
   resources :users, only: [:new, :create]
-  resources :events
   resources :widgets
+  resources :events do
+    collection do
+      get 'latest' => 'events#latest'
+    end
+  end
   root 'events#index'
   get 'users/find' => 'users#find_by_email', as: :find_user
   get 'login' => 'sessions#new'

@@ -6,6 +6,13 @@ guest_2 = User.create!(password:'123',first_name: 'Scott', last_name: 'Summers',
 graduation = Event.create!(name: 'Graduation', min_age: 18, held_at: DateTime.parse('05/06/2015'), organizer_id: organizer.id)
 mysteryland= Event.create!(name: 'Mysterland', min_age: 18, held_at: DateTime.parse('22/05/2015'), organizer_id: organizer.id)
 
+5.times do
+  e = Event.create!(name: Faker::Commerce.product_name, min_age: 18, held_at: '2015-06-01', organizer: organizer)
+  e.guests << guest_1 if rand(12) < 6
+  e.guests << guest_2 if rand(12) < 6
+  e.save!
+end
+
 resi_1 = Reservation.create!(user_id: guest_1.id, event_id: graduation.id)
 resi_2 = Reservation.create!(user_id: guest_2.id, event_id: graduation.id)
 resi_3 = Reservation.create!(user_id: guest_1.id, event_id: mysteryland.id)

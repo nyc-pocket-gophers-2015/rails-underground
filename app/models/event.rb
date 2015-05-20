@@ -5,5 +5,4 @@ class Event < ActiveRecord::Base
 
   scope :future, -> { where('held_at > ?', Time.now) }
   scope :past, -> { where('held_at < ?', Time.now) }
-
 end
