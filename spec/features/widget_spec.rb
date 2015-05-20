@@ -8,5 +8,6 @@ RSpec.feature "Widget management", :type => :feature do
     click_button "Create Widget"
 
     expect(page).to have_text("Widget was successfully created.")
+    expect(page).to have_selector("#new_widget")
   end
 end
