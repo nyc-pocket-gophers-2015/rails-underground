@@ -3,6 +3,10 @@ class WidgetsController < ApplicationController
     @widget = Widget.new
   end
 
+  def index
+    @widgets = Widget.all
+  end
+
   def create
     @widget = Widget.new(widget_params)
     if @widget.save
