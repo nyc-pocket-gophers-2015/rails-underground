@@ -10,6 +10,7 @@ class WidgetsController < ApplicationController
   def create
     @widget = Widget.new(widget_params)
     if @widget.save
+      flash[:notice] = "Widget was successfully created."
       redirect_to widgets_path
     else
       render :new
