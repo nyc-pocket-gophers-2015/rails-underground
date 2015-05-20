@@ -1,5 +1,5 @@
 <div>
-<h3><%= event.name %></h3>
+<h3 class="event_name"><%= event.name %></h3>
 <%= event.held_at.to_formatted_s(:d_m_y) %>
 <%= render partial: 'guest', collection: event.guests %>
 
