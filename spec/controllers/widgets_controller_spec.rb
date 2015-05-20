@@ -1,5 +1,14 @@
 require 'rails_helper'
 RSpec.describe WidgetsController do
+
+  describe '#index' do
+    it "should assign the list of widgets" do
+      get :index
+      expect(assigns(:widgets)).to eq(Widget.all)
+    end
+  end
+
+
   describe '#new' do
     it "should assign a new widget" do
       get :new
